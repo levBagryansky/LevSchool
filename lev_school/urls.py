@@ -18,6 +18,7 @@ from django.urls import path
 from .import views
 
 urlpatterns = [
+    path('admin/', admin.site.urls),
     path('', views.home, name='home'),
     path('book_list/', views.book_list, name='book_list'),
     path('add_book/', views.add_book, name='add_book'),

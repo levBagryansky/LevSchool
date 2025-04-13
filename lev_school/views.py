@@ -3,10 +3,6 @@ from django.core.cache import cache
 from main.models import Book
 from main.forms import BookForm
 
-
-# from . import terms_work
-
-
 def home(request):
     return render(request, "home.html")
 
