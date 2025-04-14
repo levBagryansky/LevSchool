@@ -23,7 +23,16 @@
             </div>
           {% endfor %}
 
-          <button type="submit" class="btn btn-primary">📥 Сохранить</button>
+          {% if form.non_field_errors %}
+            <div class="alert alert-danger">
+              {% for error in form.non_field_errors %}
+                <p class="mb-0">{{ error }}</p>
+              {% endfor %}
+            </div>
+          {% endif %}
+          <button type="submit" class="btn btn-success">
+            <i class="bi bi-bookmark-check-fill"></i> Сохранить произведение
+          </button>
         </form>
       </div>
     </div>
