@@ -9,33 +9,39 @@ class Migration(migrations.Migration):
 
     dependencies = [
         migrations.swappable_dependency(settings.AUTH_USER_MODEL),
-        ('main', '0001_initial'),
+        ("main", "0001_initial"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='book',
-            name='added_by',
-            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, related_name='books', to=settings.AUTH_USER_MODEL),
+            model_name="book",
+            name="added_by",
+            field=models.ForeignKey(
+                blank=True,
+                null=True,
+                on_delete=django.db.models.deletion.CASCADE,
+                related_name="books",
+                to=settings.AUTH_USER_MODEL,
+            ),
         ),
         migrations.AddField(
-            model_name='book',
-            name='is_read',
+            model_name="book",
+            name="is_read",
             field=models.BooleanField(default=False),
         ),
         migrations.AlterField(
-            model_name='book',
-            name='author',
+            model_name="book",
+            name="author",
             field=models.CharField(blank=True, max_length=100),
         ),
         migrations.AlterField(
-            model_name='book',
-            name='description',
+            model_name="book",
+            name="description",
             field=models.TextField(blank=True),
         ),
         migrations.AlterField(
-            model_name='book',
-            name='title',
+            model_name="book",
+            name="title",
             field=models.CharField(max_length=200),
         ),
     ]

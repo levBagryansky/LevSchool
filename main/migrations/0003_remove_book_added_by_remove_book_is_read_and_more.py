@@ -6,31 +6,31 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('main', '0002_book_added_by_book_is_read_alter_book_author_and_more'),
+        ("main", "0002_book_added_by_book_is_read_alter_book_author_and_more"),
     ]
 
     operations = [
         migrations.RemoveField(
-            model_name='book',
-            name='added_by',
+            model_name="book",
+            name="added_by",
         ),
         migrations.RemoveField(
-            model_name='book',
-            name='is_read',
+            model_name="book",
+            name="is_read",
         ),
         migrations.AlterField(
-            model_name='book',
-            name='author',
-            field=models.CharField(blank=True, max_length=100, verbose_name='Автор'),
+            model_name="book",
+            name="author",
+            field=models.CharField(blank=True, max_length=100, verbose_name="Автор"),
         ),
         migrations.AlterField(
-            model_name='book',
-            name='description',
-            field=models.TextField(blank=True, verbose_name='Описание'),
+            model_name="book",
+            name="description",
+            field=models.TextField(blank=True, verbose_name="Описание"),
         ),
         migrations.AlterField(
-            model_name='book',
-            name='title',
-            field=models.CharField(max_length=200, verbose_name='Название'),
+            model_name="book",
+            name="title",
+            field=models.CharField(max_length=200, verbose_name="Название"),
         ),
     ]
